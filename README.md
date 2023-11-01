@@ -120,7 +120,7 @@ Ahora vamos a colocar el primer *breakpoint* -punto de ruptura-, donde la ejecuc
 Punto de interrupción 1 at 0x555555555165: file test.c, line 11.
 ```
 
-Ya tenemos un punto de ruptura en la línea `10`. Si ahora ejecutamos, el programa se detendrá cuando llegue a ella.
+Ya tenemos un punto de ruptura en la línea `10`. Si ahora ejecutamos, el programa se detendrá cuando llegue a ella e indicará la siguiente linea que será ejecutada al continuar, en este caso la `11`:
 
 ```bash
 (gdb) r
