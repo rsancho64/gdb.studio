@@ -254,6 +254,7 @@ info gdb
 ## to do
 
 - [ ] Hay GUIs para trabajar con **gdb**. Uno es DD y puede descargarse en [**http://sourceforge.net/projects/ddd**](http://sourceforge.net/projects/ddd)
-
 - [ ] https://code.visualstudio.com/docs/cpp/cpp-debug
+- [ ] https://developers.redhat.com/blog/2021/04/30/the-gdb-developers-gnu-debugger-tutorial-part-1-getting-started-with-the-debugger#
+- [ ] https://developers.redhat.com/articles/2022/01/10/gdb-developers-gnu-debugger-tutorial-part-2-all-about-debuginfo
 
