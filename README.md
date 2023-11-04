@@ -249,4 +249,9 @@ man gdb
 info gdb
 ```
 
-Hay GUIs para trabajar con **gdb**. Uno es DD y puede descargarse en [**http://sourceforge.net/projects/ddd**](http://sourceforge.net/projects/ddd)
+## to do
+
+- [ ] Hay GUIs para trabajar con **gdb**. Uno es DD y puede descargarse en [**http://sourceforge.net/projects/ddd**](http://sourceforge.net/projects/ddd)
+
+- [ ] https://code.visualstudio.com/docs/cpp/cpp-debug
+
