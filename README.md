@@ -3,7 +3,7 @@
 lang: es-Es
 
 title: |
-    **primeros pasos con GDB**
+    **GDB 101**
 subtitle: | 
     Dpto de Informática. IES Rio Arba de Tauste
 author:
