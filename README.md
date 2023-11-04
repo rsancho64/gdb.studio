@@ -29,9 +29,7 @@ monofont: DejaVuSansMono.ttf
 
 \newpage
 
-Este documento pretende ser breve y sencilla guía práctica al [**depurador GDB**](http://gnu.org)
-
-Usaremos com ejemplo este sencillo programa:
+Este documento pretende ser breve guía práctica al [**depurador GDB**](http://gnu.org). Usaremos como ejemplo este sencillo programa:
 
 ```C
 1    #include <stdio.h>
@@ -61,7 +59,7 @@ Lo primero es compilar con opción `-g` para que no sea optimizado e incluya la 
 gcc test.c -g -o depurable.exe
 ```
 
-Compilado el ejecutable, podemos comenzar la depuración invocando **gbd** con su nombre. Con la opcion `-q` evitamos cabeceras introductorias del programa (menos ruido)
+Compilado el ejecutable, podemos comenzar la depuración de su codigo fuente invocando **gbd** con su nombre. Con la opcion `-q` evitamos el ruido de las cabeceras introductorias del programa
 
 ```bash
 gdb depurable.exe -q
@@ -69,7 +67,7 @@ Reading symbols from depurable.exe...
 (gdb) 
 ```
 
-Prompt `(gdb)` del depurador listo para recibir órdenes. El primer comando es `(l)ist`. Muestra el código fuente en la zona proxima al momento de control.
+`(gdb)` es el prompt del depurador, listo para recibir comandos. El primero es `(l)ist`. Muestra el código fuente en la zona proxima al momento de control.
 
 ```C
 (gdb) l
@@ -86,9 +84,13 @@ Prompt `(gdb)` del depurador listo para recibir órdenes. El primer comando es `
 (gdb) 
 ```
 
-Para ejecutar el programa, comando `(r)un`. Como aún no hemos puesto ningún punto de ruptura, ejecutará sin pausas y solo se parará cuando precise una entrada. Lo repetimos porque en la primera ejecución propone una descarga de debuginfo[^1]
+Para ejecutar el programa, tenemos `(r)un`. Y como aún no hemos puesto ningún punto de ruptura, ejecutará sin pausas y solo parará cuando precise una entrada. Lo repetimos porque en la primera ejecución propone una descarga de debuginfo[^1]
 
-[^1]: Ajustaremos para que no haga falta más veces con el comando `echo set debuginfod enabled > ~/.gdbinit`
+[^1]: Ajustaremos para que no haga falta más veces con el comando **`echo set debuginfod enabled on> ~/.gdbinit`**  
+`This GDB supports auto-downloading debuginfo from the following URLs: <https://debuginfod.ubuntu.com>`  
+`Enable debuginfod for this session? (y or [n]) y`  
+`Debuginfod has been enabled.`  
+`To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.`  
 
 ```bash
 (gdb) r
